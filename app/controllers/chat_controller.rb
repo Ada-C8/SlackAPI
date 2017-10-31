@@ -16,7 +16,7 @@ class ChatController < ApplicationController
       flash[:error] = "Error!"
     end
 
-    redirect_to root_path
+    redirect_to chat_new_path(params["channel"])
 
 
   end

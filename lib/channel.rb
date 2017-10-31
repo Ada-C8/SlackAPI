@@ -13,5 +13,4 @@ class Channel
     @members = options[:members]
 
   end
-
 end
