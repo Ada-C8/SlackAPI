@@ -1,7 +1,11 @@
 require 'test_helper'
 
-class ChatControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
-end
+
+  describe ChatController do
+    it "can get the list of channels" do
+      VCR.use_cassette("index_action") do
+        get root_path
+        must_respond_with :success
+      end
+    end
+  end
