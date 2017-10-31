@@ -41,7 +41,16 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end
+
+
+group :test do
+  gem 'minitest-rails'
+  gem 'minitest-reporters'
+end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
